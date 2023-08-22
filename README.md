@@ -102,7 +102,7 @@ if active_sentence:
     feedback_new.append(active_sentence)
     label_new.append(label[i])
 ```
-**Progress report：** The goal of Task A is to improve the quality of system-generated feedback by diversifying the feedback text. We have successfully implemented several text enhancement techniques, including negation, noun replacement, adjective antonym replacement, Unigram Noising, Instance Crossover Augmentation, and voice transformation. These techniques have successfully enhanced feedback text and in some cases changed the tone and grammatical structure of the text. This will help generate more diverse feedback and improve the performance of the system.****
+**Progress report：** The goal of Task A is to improve the quality of system-generated feedback by diversifying the feedback text. We have successfully implemented several text enhancement techniques, including negation, noun replacement, adjective antonym replacement, Unigram Noising, Instance Crossover Augmentation, and voice transformation. These techniques have successfully enhanced feedback text and in some cases changed the tone and grammatical structure of the text. This will help generate more diverse feedback and improve the performance of the system.
 
        
 
