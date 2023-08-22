@@ -1,4 +1,5 @@
 
+
 # Assessing the Factuality of System-generated Feedback (Data Augmentation)
 
 Welcome to the Gears 2023 Internship Program! This repository focuses on addressing the challenge of assessing the factuality of system-generated feedback.
@@ -25,7 +26,6 @@ Task B is centered around querying ChatGPT.  We work on creating queries and ana
 - [TODO List](#todo-list)
 - [Authors](#authors)
 
-## Task A
 
 ## Task A
 
@@ -104,10 +104,26 @@ if active_sentence:
 ```
 **Progress report：** The goal of Task A is to improve the quality of system-generated feedback by diversifying the feedback text. We have successfully implemented several text enhancement techniques, including negation, noun replacement, adjective antonym replacement, Unigram Noising, Instance Crossover Augmentation, and voice transformation. These techniques have successfully enhanced feedback text and in some cases changed the tone and grammatical structure of the text. This will help generate more diverse feedback and improve the performance of the system.
 
-       
+## data.py
+
+This Python file is intended for use in data augmentation and text processing to improve the quality and diversity of text data for various natural language processing and machine learning tasks.
+
+## steps
+
+1. **Prepare the dataset**: First, prepare a dataset containing information such as feedback text and labels, usually a CSV file. Make sure you have installed all necessary Python libraries such as pandas, nltk, rouge, etc.
+
+2. **Configure Baidu Translate API**: In the Python file, replace the key information (APP_ID, API_KEY, SECRET_KEY) of Baidu Translate API with your own key information. This will be used for text translation operations.
+
+3. **Import file**: In the Python file, make sure that your dataset is imported correctly, including feedback text, labels, and other information.
+
+4. **Run data enhancement**: By calling different functions in the Python file, you can perform various data enhancement operations on the feedback text, such as negative processing, noun replacement, adjective antonym replacement, Unigram Noising, Instance Crossover Augmentation, etc. Depending on your needs, choose the appropriate enhancement method.
+
+5. **Save Augmented Data**: Finally, the code saves the processed data to a new CSV file. You can specify the saved file path and name in code.
+
+6. **Use Augmented Data**: You can now use Augmented Data for various Natural Language Processing or Machine Learning tasks such as Text Classification, Sentiment Analysis, Regression, etc. Load a new CSV file for enhanced text data.
 
 
-## Task B
+
 
 ## Task B
 
@@ -163,6 +179,38 @@ In Task B, we utilize OpenAI's GPT-3.5 Turbo model to generate feedback evaluati
     ```
 
 This code allows us to leverage AI-driven feedback generation to evaluate the relevance of feedback to student documentation. The generated feedback is saved to a CSV file for further analysis.
+***
+## GPT.py
+
+This Python file uses OpenAI's GPT model to evaluate the relevance of the feedback text to a given document. You can use this model to automatically mark whether feedback text is relevant to a document.
+
+## steps
+
+1. **Prepare data**: In the Python file, you need to prepare two texts, one is document (doc) and the other is feedback (feedback). Make sure you have set up an API key.
+
+2. **Configure API key**: In the Python file, replace `api_key` with your own OpenAI API key.
+
+3. **Run the model**: Pass the document and feedback to the GPT model by calling the `get_completion` function to obtain the evaluation result. The input data is defined in `prompt`.
+
+4. **Process output**: Use the `process_output` function to parse the output of GPT into feedback text and labels.
+
+5. **Save results to CSV file**: Specify the path to the output CSV file (`output_csv_file`), then use the `save_feedback_and_labels_to_csv` function to save the feedback text and labels to the CSV file.
+
+6. **Evaluation Results**: Open the CSV file and you will see that each feedback text is marked as relevant (1) or irrelevant (0). This can help you better understand the relevance of the feedback text to the document.
+
+## data-prepare.py 
+
+This Python file is used to modify the column names of the CSV file. You can use this file to change the column names in the CSV file, then save the modified data as a new CSV file.
+
+## steps
+
+1. **Prepare data**: In the Python file, you need to specify the path to the input CSV file (`input_file_path`) and the path to the output CSV file to save (`output_file_path`).
+
+2. **Modify column names**: By calling the `modify_column_names` function, pass the path of the input CSV file and the path of the output CSV file to the function. Inside the function, modify the column name to the specified name. In this example, change the `document` column name to `prompt` and the `summary` column name to `completion`.
+
+3. **Run Script**: Runs the Python script, which will read the input CSV file, modify the column names, and then save the modified data as a new CSV file.
+
+4. **Check Results**: After the script runs, you will find the modified CSV file in the output CSV file path. You can open this file to check if the column names have been modified successfully.
 
 
 ## TODO List
