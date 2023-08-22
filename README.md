@@ -29,9 +29,9 @@ Task B is centered around querying ChatGPT.  We work on creating queries and ana
 
 ## Task A
 
-**任务描述：** Task A aims to increase the diversity of feedback text through multiple text enhancement techniques, thereby improving the quality and diversity of system-generated feedback. In this task, we use a series of text processing techniques, including negation processing, noun replacement, adjective antonym replacement, Unigram Noising, Instance Crossover Augmentation, voice transformation, etc.
+**Task details：** Task A aims to increase the diversity of feedback text through multiple text enhancement techniques, thereby improving the quality and diversity of system-generated feedback. In this task, we use a series of text processing techniques, including negation processing, noun replacement, adjective antonym replacement, Unigram Noising, Instance Crossover Augmentation, voice transformation, etc.
 
-**代码示例：**
+**Code example：**
 
 ```python
 # Negative Processing
@@ -102,7 +102,7 @@ if active_sentence:
     feedback_new.append(active_sentence)
     label_new.append(label[i])
 ```
-**进展报告：** Task A 的目标是通过多样化反馈文本来提高系统生成反馈的质量。我们已经成功实施了多种文本增强技术，包括否定处理、名词替换、形容词反义词替换、Unigram Noising、Instance Crossover Augmentation 和语态转换。这些技术已经成功地增强了反馈文本，并在某些情况下改变了文本的语气和语法结构。这将有助于生成更多样性的反馈，提高系统的性能。
+**Progress report：** The goal of Task A is to improve the quality of system-generated feedback by diversifying the feedback text. We have successfully implemented several text enhancement techniques, including negation, noun replacement, adjective antonym replacement, Unigram Noising, Instance Crossover Augmentation, and voice transformation. These techniques have successfully enhanced feedback text and in some cases changed the tone and grammatical structure of the text. This will help generate more diverse feedback and improve the performance of the system.****
 
        
 
